@@ -23,11 +23,12 @@ Version:        0.1.0
     max-width: 100%;
 }
 
-.header-main {
+.site-header {
     background: #5c85b1;
 }
 #secondary {
     background: #6B91B8;
+    color: rgba(255, 255, 255, 0.9);
 }
 #secondary a:hover {
     color: #666;
@@ -39,6 +40,9 @@ Version:        0.1.0
     color: #666;
 }
 
+.primary-navigation ul ul a {
+    padding: 6px 12px;
+}
 
 
 
@@ -104,7 +108,11 @@ a,
 
 
 
-
+@media screen and (min-width: 1008px) {
+    .site:before {
+	background-color: #f5f5f5;
+    }
+}
 
 
 .search-toggle:hover,
@@ -112,6 +120,7 @@ a,
 .search-box,
 .secondary-navigation ul ul a:hover,
 .secondary-navigation ul ul li.focus > a,
+.primary-navigation ul a:hover,
 .primary-navigation ul ul a:hover,
 .primary-navigation ul ul li.focus > a,
 .content-sidebar .widget input[type="button"]:hover,
@@ -140,7 +149,7 @@ input[type="submit"]:focus,
 .page-links a:hover,
 .widget_calendar tbody a:hover,
 .slider-control-paging a:hover:before {
-	background-color: #6B91B8;/*#41a62a;*/ 4A7EB6
+	background-color: #6B91B8;/*#41a62a;*/ 
 }
 
 
