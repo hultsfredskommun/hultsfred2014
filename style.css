@@ -1,0 +1,209 @@
+/*
+Theme Name:     Hultsfred2014
+Theme URI:      http: //blogg.hultsfred.se/
+Description:    Hultsfreds bloggportal (based on twentyfourteen)
+Author:         Jonas Hjalmarsson
+Author URI:     http: //blogg.hultsfred.se
+Template:       twentyfourteen
+Version:        0.1.0
+*/
+
+@import url("../twentyfourteen/style.css");
+
+.logo {
+    background: white;
+    padding: 1px 10px 0px;
+    float:right;
+}
+.panorama-wrapper {
+    margin: 0 auto;
+    padding: 15px 30px;
+}
+.panorama-wrapper img {
+    max-width: 100%;
+}
+
+.header-main {
+    background: #5c85b1;
+}
+#secondary {
+    background: #6B91B8;
+}
+#secondary a:hover {
+    color: #666;
+}
+#supplementary {
+    background: #e5e6e7;
+}
+#supplementary * {
+    color: #666;
+}
+
+
+
+
+/*
+ * color changes 
+ */
+::selection {
+	background-color: #5c85b1;/*#24890d;*/
+}
+::-moz-selection {
+	background-color: #5c85b1;/*#24890d;*/
+}
+.site-footer,
+button,
+.button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.search-toggle,
+.hentry .mejs-controls .mejs-time-rail .mejs-time-current,
+.hentry .mejs-overlay:hover .mejs-overlay-button,
+.widget button,
+.widget .button,
+.widget input[type="button"],
+.widget input[type="reset"],
+.widget input[type="submit"],
+.widget button,
+.widget .button,
+.widget input[type="button"],
+.widget input[type="reset"],
+.widget input[type="submit"],
+.widget_calendar tbody a,
+.content-sidebar .widget input[type="button"],
+.content-sidebar .widget input[type="reset"],
+.content-sidebar .widget input[type="submit"],
+.slider-control-paging .slider-active:before,
+.slider-control-paging .slider-active:hover:before,
+.slider-direction-nav a:hover,
+.primary-navigation ul ul,
+.primary-navigation li:hover > a,
+.primary-navigation li.focus > a,
+.secondary-navigation ul ul,
+.secondary-navigation li:hover > a,
+.secondary-navigation li.focus > a {
+	background-color: #5c85b1;/*#24890d;*/
+}
+
+.paging-navigation .page-numbers.current {
+	border-top: 5px solid #5c85b1;/*#24890d;*/
+}
+
+a,
+.content-sidebar .widget a {
+	color: #5c85b1;/*#24890d;*/
+}
+
+
+
+	
+	
+
+
+
+
+
+
+
+
+.search-toggle:hover,
+.search-toggle.active,
+.search-box,
+.secondary-navigation ul ul a:hover,
+.secondary-navigation ul ul li.focus > a,
+.primary-navigation ul ul a:hover,
+.primary-navigation ul ul li.focus > a,
+.content-sidebar .widget input[type="button"]:hover,
+.content-sidebar .widget input[type="button"]:focus,
+.content-sidebar .widget input[type="reset"]:hover,
+.content-sidebar .widget input[type="reset"]:focus,
+.content-sidebar .widget input[type="submit"]:hover,
+.content-sidebar .widget input[type="submit"]:focus,
+.widget input[type="button"]:hover,
+.widget input[type="button"]:focus,
+.widget input[type="reset"]:hover,
+.widget input[type="reset"]:focus,
+.widget input[type="submit"]:hover,
+.widget input[type="submit"]:focus,
+button:hover,
+button:focus,
+.button:hover,
+.button:focus,
+input[type="button"]:hover,
+input[type="button"]:focus,
+input[type="reset"]:hover,
+input[type="reset"]:focus,
+input[type="submit"]:hover,
+input[type="submit"]:focus,
+.entry-meta .tag-links a:hover,
+.page-links a:hover,
+.widget_calendar tbody a:hover,
+.slider-control-paging a:hover:before {
+	background-color: #6B91B8;/*#41a62a;*/ 4A7EB6
+}
+
+
+.page-links a:hover {
+	border: 1px solid #6B91B8;/*#41a62a;*/
+}
+.entry-meta .tag-links a:hover:before {
+	border-right-color: #6B91B8;/*#41a62a;*/
+}
+.paging-navigation a:hover {
+	border-top: 5px solid #6B91B8;/*#41a62a;*/
+}
+
+.entry-content .edit-link a:hover,
+a:active,
+a:hover,
+.hentry .mejs-controls .mejs-button button:hover,
+.content-sidebar .widget a:hover,
+.content-sidebar .widget .widget-title a:hover,
+.site-navigation a:hover,
+.entry-title a:hover,
+.entry-meta a:hover,
+.cat-links a:hover,
+.post-navigation a:hover,
+.image-navigation a:hover,
+.comment-author a:hover,
+.comment-list .pingback a:hover,
+.comment-list .trackback a:hover,
+.comment-metadata a:hover,
+.comment-reply-title small a:hover,
+.widget a:hover,
+.widget-title a:hover,
+.widget_twentyfourteen_ephemera .entry-meta a:hover,
+.content-sidebar .widget_twentyfourteen_ephemera .entry-meta a:hover ,
+.site-info a:hover,
+.featured-content a:hover    {
+	color: #6B91B8;/*#41a62a;*/
+}
+
+
+
+
+
+
+
+button:active,
+.button:active,
+input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active ,
+.widget input[type="button"]:active,
+.widget input[type="reset"]:active,
+.widget input[type="submit"]:active,
+.content-sidebar .widget input[type="button"]:active,
+.content-sidebar .widget input[type="reset"]:active,
+.content-sidebar .widget input[type="submit"]:active {
+	background-color: #8FADCA;/*#55d737;*/
+}
+
+.site-navigation .current_page_item > a,
+.site-navigation .current_page_ancestor > a,
+.site-navigation .current-menu-item > a,
+.site-navigation .current-menu-ancestor > a {
+	color: #8FADCA;/*#55d737;*/
+}
+
