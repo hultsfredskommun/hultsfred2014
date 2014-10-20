@@ -57,6 +57,8 @@ Version:        0.1.0
 #supplementary * {
     color: #666;
 }
+.pre-primary-navigation,
+.primary-navigation,
 .primary-sticky-navigation {
 	margin-left: 0px;
 }
@@ -76,8 +78,6 @@ Version:        0.1.0
 	display: show;
 }
 
-
-
 .site-info {
 	text-align: center;
 }
@@ -89,6 +89,16 @@ Version:        0.1.0
 	margin-right: 0;
 	max-width: none;
 }
+
+
+body,
+button,
+input,
+select,
+textarea {
+	font-family: Arial, sans-serif;
+}
+
 
 /* blogstartpage*/
 .bloggstartpage {
@@ -111,12 +121,34 @@ Version:        0.1.0
 	width: 100%;
 	overflow: hidden;
 }
+.blogheaderimg img.noimage {
+	margin: 30px 0;
+	height: 40px;
+}
 .blogheaderimg img {
 	height: 100px;
 	width: auto;
 	max-width: none;
 	text-align: center;
 }
+
+
+
+/* hide secondary column*/
+.hide-secondary #secondary {
+	display: none;
+}
+@media screen and (min-width: 1080px) {
+	.hide-secondary .site:before  {
+		width: 0;
+	}
+}
+@media screen and (min-width: 1080px) {
+	.hide-secondary .site-content, .hide-secondary .site-main .widecolumn {
+		margin-left: 0;
+	}
+}
+
 ::-webkit-input-placeholder {
    color: white;
 }
@@ -208,7 +240,7 @@ a,
 		margin-top: 0px;
 	}
 	.blogitem {
-		width: 25%;
+		width: 20%;
 	}
 }
 

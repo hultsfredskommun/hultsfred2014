@@ -81,11 +81,11 @@ function hk_startpage_func( $atts ){
 
 	foreach ($blog_list AS $blog) { 
 		$retValue .= '<div class="blogitem">';
-		$retValue .= '<div class="blogheaderimg"><img src="' . $blog['image'] .'" alt="' . $blog['name'] . '" /></div>';
+		if ($blog['image'] != "")
+			$retValue .= '<div class="blogheaderimg"><img src="' . $blog['image'] .'" alt="' . $blog['name'] . '" /></div>';
+		else
+			$retValue .= '<div class="blogheaderimg"><img class="noimage" src="' . get_stylesheet_directory_uri() . '/Hultsfreds_kommun_blO_grO_blOtxt.png" alt="' . $blog['name'] . '" /></div>';
 		$retValue .= '<strong><a href="' . $blog['siteurl'] . '">' . $blog['name'] . '</a></strong> ';
-		if ($blog['description'] != "")
-			$retValue .= "- ";
-		$retValue .= $blog['description'];
 		$retValue .= '<br><i>Uppdaterad ' . $blog['updated'] . '</i></div>';
 
 		//restore to blog

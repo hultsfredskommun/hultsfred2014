@@ -29,8 +29,11 @@
 	<![endif]-->
 	<?php wp_head(); ?>
 </head>
-
-<body <?php body_class(); ?>>
+<?php $hide_secondary = get_post_meta( get_the_ID(), 'hide-secondary', true ); 
+$hide_secondary_class = "";
+if ($hide_secondary == "true") $hide_secondary_class = "hide-secondary";
+?>
+<body <?php body_class($hide_secondary_class); ?>>
 <div id="page" class="hfeed site">
 	<?php if ( get_header_image() ) : ?>
 	<div id="site-header">
@@ -47,7 +50,7 @@
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 
 			<div class="logo">
-				<span id="logo" class="logoimg"><a href="http://www.hultsfred.se/"><img src="http://www.hultsfred.se//files/2014/02/Hultsfreds_kommun_blO_grO_blOtxt1.png" alt="Hultsfreds kommun"></a></span>
+				<span id="logo" class="logoimg"><a href="http://www.hultsfred.se/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/Hultsfreds_kommun_blO_grO_blOtxt.png" alt="Hultsfreds kommun"></a></span>
 			</div>
 			<div class="search-toggle">
 				<a href="#search-container" class="screen-reader-text"><?php _e( 'Search', 'twentyfourteen' ); ?></a>
@@ -56,27 +59,28 @@
 			
 			<button class="menu-toggle"><?php _e( 'Primary Menu', 'twentyfourteen' ); ?></button>
 			
+			
 			<nav id="primary-sticky-navigation" class="site-navigation primary-navigation primary-sticky-navigation" role="navigation">
 				<div class="nav-menu">
-				<ul>
-					
-					<li class="page_item page_item_has_children"><a>Fler bloggar</a>
-						<ul class="children">
-						<?php //, 'container' => '', 'items_wrap' => ''
-						$blog_list = get_blog_list( 0, 'all' ); 
-						foreach ($blog_list AS $blog) { 
-							if ($blog['blog_id'] != "1") { 
-								$details = get_blog_details($blog['blog_id']); 
-								echo '<li class="page_item"><a href="' . $details->siteurl . '">' . $details->blogname . '</a>';
-								echo '</li>';
+					<ul>
+						
+						<li class="page_item page_item_has_children"><a>Fler bloggar</a>
+							<ul class="children">
+							<?php //, 'container' => '', 'items_wrap' => ''
+							$blog_list = get_blog_list( 0, 'all' ); 
+							foreach ($blog_list AS $blog) { 
+								if ($blog['blog_id'] != "1") { 
+									$details = get_blog_details($blog['blog_id']); 
+									echo '<li class="page_item"><a href="' . $details->siteurl . '">' . $details->blogname . '</a>';
+									echo '</li>';
+								}
 							}
-						}
-						?>
-						</ul>
-					</li>
-					<!--li class="page_item"><a href="http://www.hultsfred.se/">Till hultsfred.se</a></li-->
-				</ul>
-			</div>
+							?>
+							</ul>
+						</li>
+						<!--li class="page_item"><a href="http://www.hultsfred.se/">Till hultsfred.se</a></li-->
+					</ul>
+				</div>
 			</nav>
 
 			<nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
@@ -84,6 +88,7 @@
 				<a class="screen-reader-text skip-link" href="#content"><?php _e( 'Skip to content', 'twentyfourteen' ); ?></a>
 				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
 			</nav>
+
 		</div>
 
 		<div id="search-container" class="search-box-wrapper hide">
