@@ -47,16 +47,16 @@
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 
 			<div class="logo">
-				<span id="logo" class="logo"><a href="http://www.hultsfred.se/"><img src="http://www.hultsfred.se//files/2014/02/Hultsfreds_kommun_blO_grO_blOtxt1.png" alt="Hultsfreds kommun"></a></span>
+				<span id="logo" class="logoimg"><a href="http://www.hultsfred.se/"><img src="http://www.hultsfred.se//files/2014/02/Hultsfreds_kommun_blO_grO_blOtxt1.png" alt="Hultsfreds kommun"></a></span>
 			</div>
 			<div class="search-toggle">
 				<a href="#search-container" class="screen-reader-text"><?php _e( 'Search', 'twentyfourteen' ); ?></a>
 		
 			</div>
-
+			
+			<button class="menu-toggle"><?php _e( 'Primary Menu', 'twentyfourteen' ); ?></button>
+			
 			<nav id="primary-sticky-navigation" class="site-navigation primary-navigation primary-sticky-navigation" role="navigation">
-				<button class="menu-toggle"><?php _e( 'Primary Menu', 'twentyfourteen' ); ?></button>
-				<a class="screen-reader-text skip-link" href="#content"><?php _e( 'Skip to content', 'twentyfourteen' ); ?></a>
 				<div class="nav-menu">
 				<ul>
 					
@@ -80,7 +80,7 @@
 			</nav>
 
 			<nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
-				<button class="menu-toggle"><?php _e( 'Primary Menu', 'twentyfourteen' ); ?></button>
+				
 				<a class="screen-reader-text skip-link" href="#content"><?php _e( 'Skip to content', 'twentyfourteen' ); ?></a>
 				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
 			</nav>
