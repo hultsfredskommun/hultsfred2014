@@ -17,8 +17,23 @@
 			<?php get_sidebar( 'footer' ); ?>
 
 			<div class="panorama-wrapper">
-				<img src="http://www.hultsfred.se/files/2013/03/panorama_webb.png" alt="Hultsfreds kommun" />
-		     	</div>
+				<img src="http://www.hultsfred.se/files/2013/03/panorama_webb.png" alt="Hultsfreds kommun" /><br>
+					<?php 
+					$blog_list = get_blog_list( 0, 'all' ); 
+					$first = true;
+					foreach ($blog_list AS $blog) { 
+						if ($blog['blog_id'] != "1") { 
+							$details = get_blog_details($blog['blog_id']); 
+							if (!$first) {
+								echo ' | ';
+							}
+							$first = false;
+							echo ' <a href="' . $details->siteurl . '">' . $details->blogname . '</a> ';
+						}
+					}
+					?>
+						
+			</div>
 			<div class="site-info">
 				<?php do_action( 'twentyfourteen_credits' ); ?>
 				<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'twentyfourteen' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'twentyfourteen' ), 'WordPress' ); ?></a> | <?php wp_loginout(); ?>
