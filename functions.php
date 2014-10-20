@@ -54,10 +54,11 @@ function hk_startpage_func( $atts ){
 	$retValue = "";
 
 	
-	$blog_sites = wp_get_sites(); 
+	$blog_sites = wp_get_sites(array("archived"=>"0","deleted"=>"0")); 
 	$blog_list = array();
 	$i = 0;
-	foreach ($blog_sites AS $blog) { 
+	foreach ($blog_sites AS $blog) {
+		
 		if ($blog['blog_id'] != "1") {
 			switch_to_blog( $blog['blog_id'] );
 			

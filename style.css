@@ -75,7 +75,6 @@ Version:        0.1.0
 	position: relative;
 	background: transparent;
 	float: right;
-	display: show;
 }
 
 .site-info {
@@ -138,16 +137,15 @@ textarea {
 .hide-secondary #secondary {
 	display: none;
 }
-@media screen and (min-width: 1080px) {
-	.hide-secondary .site:before  {
-		width: 0;
-	}
+.hide-secondary .site:before  {
+	width: 0;
 }
-@media screen and (min-width: 1080px) {
-	.hide-secondary .site-content, .hide-secondary .site-main .widecolumn {
-		margin-left: 0;
-	}
+.hide-secondary .site-content, .hide-secondary .site-main .widecolumn {
+	margin-left: 0;
 }
+
+
+
 
 ::-webkit-input-placeholder {
    color: white;
@@ -224,6 +222,19 @@ a,
 	
 
 
+@media screen and (min-width: 594px) {
+	.site-content .entry-header {
+		padding-right: 10px;
+		padding-left: 10px;
+	}
+}
+
+@media screen and (min-width: 673px) {
+	.site-content .entry-header {
+		padding-right: 30px;
+		padding-left: 30px;
+	}
+}
 
 @media screen and (min-width: 783px) {
 	.menu-toggle {
