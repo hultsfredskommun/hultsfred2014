@@ -54,22 +54,11 @@
 		
 			</div>
 
-			<nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
+			<nav id="primary-sticky-navigation" class="site-navigation primary-navigation primary-sticky-navigation" role="navigation">
 				<button class="menu-toggle"><?php _e( 'Primary Menu', 'twentyfourteen' ); ?></button>
 				<a class="screen-reader-text skip-link" href="#content"><?php _e( 'Skip to content', 'twentyfourteen' ); ?></a>
 				<div class="nav-menu">
 				<ul>
-				
-				<?php 
-				
-					$menu = wp_nav_menu( array( 'echo' => false, 
-						'theme_location' => 'primary', 
-						'menu_class' => false, 
-						'container_class' => false, 
-						'container' => false, 
-						'items_wrap' => false) ); 
-					echo preg_replace( array( '#^<div[^>]*><ul[^>]*>#', '#</ul></div>$#' ), '', $menu );
-					?>
 					
 					<li class="page_item page_item_has_children"><a>Fler bloggar</a>
 						<ul class="children">
@@ -78,11 +67,7 @@
 						foreach ($blog_list AS $blog) { 
 							if ($blog['blog_id'] != "1") { 
 								$details = get_blog_details($blog['blog_id']); 
-								//echo '<p><a href="' . $details->siteurl . '">' . $details->blogname . '</a>';
-								//echo get_blog_option($blog['blog_id'], 'blogdescription') . '<br>';
-								//echo '<i>Uppdaterad ' . date("j/n Y", strtotime($details->last_updated)) . '';
 								echo '<li class="page_item"><a href="' . $details->siteurl . '">' . $details->blogname . '</a>';
-								//echo get_blog_option($blog['blog_id'], 'blogdescription') . '<br>';
 								echo '</li>';
 							}
 						}
@@ -92,6 +77,12 @@
 					<!--li class="page_item"><a href="http://www.hultsfred.se/">Till hultsfred.se</a></li-->
 				</ul>
 			</div>
+			</nav>
+
+			<nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
+				<button class="menu-toggle"><?php _e( 'Primary Menu', 'twentyfourteen' ); ?></button>
+				<a class="screen-reader-text skip-link" href="#content"><?php _e( 'Skip to content', 'twentyfourteen' ); ?></a>
+				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
 			</nav>
 		</div>
 
