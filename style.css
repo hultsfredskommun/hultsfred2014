@@ -89,6 +89,9 @@ Version:        0.1.0
 	text-align: center;
 }
 
+.site-content .entry-meta {
+	margin: 0 0 8px;
+}
 /* fill width fix */
 .full-width .entry-header,
 .full-width .entry-content {

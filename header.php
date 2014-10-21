@@ -59,14 +59,15 @@ if ($hide_secondary == "true") $hide_secondary_class = "hide-secondary";
 			
 			<button class="menu-toggle"><?php _e( 'Primary Menu', 'twentyfourteen' ); ?></button>
 			
-			
+			<?php if (get_current_blog_id() > 1) : ?>
 			<nav id="primary-sticky-navigation" class="site-navigation primary-navigation primary-sticky-navigation" role="navigation">
 				<div class="nav-menu">
 					<ul>
 						
-						<li class="page_item page_item_has_children"><a>Fler bloggar</a>
-							<ul class="children">
+						<li class="page_item"><a href="/">Alla bloggar</a>
 							<?php //, 'container' => '', 'items_wrap' => ''
+							/*
+							<ul class="children">
 							$blog_list = get_blog_list( 0, 'all' ); 
 							foreach ($blog_list AS $blog) { 
 								if ($blog['blog_id'] != "1") { 
@@ -75,13 +76,15 @@ if ($hide_secondary == "true") $hide_secondary_class = "hide-secondary";
 									echo '</li>';
 								}
 							}
+							</ul>*/
 							?>
-							</ul>
+							
 						</li>
 						<!--li class="page_item"><a href="http://www.hultsfred.se/">Till hultsfred.se</a></li-->
 					</ul>
 				</div>
 			</nav>
+			<?php endif; ?>
 
 			<nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
 				

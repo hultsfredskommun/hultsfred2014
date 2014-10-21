@@ -19,10 +19,15 @@
 			<div class="panorama-wrapper">
 				<img src="http://www.hultsfred.se/files/2013/03/panorama_webb.png" alt="Hultsfreds kommun" /><br>
 					<?php 
-					$blog_list = get_blog_list( 0, 'all' ); 
+					///// CREATE HELPER FUNCTION TO GET SORTED BLOGLIST!!!!!!!!
+					$blog_sites = wp_get_sites(array("archived"=>"0","deleted"=>"0")); 
+					$blog_list = array();
+					$i = 0;
 					$first = true;
-					foreach ($blog_list AS $blog) { 
-						if ($blog['blog_id'] != "1") { 
+					foreach ($blog_list AS $blog) {
+						
+						if ($blog['blog_id'] != "1") {
+					
 							$details = get_blog_details($blog['blog_id']); 
 							if (!$first) {
 								echo ' | ';
