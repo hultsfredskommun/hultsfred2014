@@ -44,16 +44,12 @@ add_shortcode( 'categorytree', 'hk_category_tree_func' );
 /*
  * shortcode [bloggstartpage], show category tree
  */
- function cmp_blogs_name($a, $b)
+function cmp_blogs_name($a, $b)
 {
     return strcmp($a["name"], $b["name"]);
 }
 
-
-function hk_startpage_func( $atts ){
-	$retValue = "";
-
-	
+function hk_get_sorted_sites() {
 	$blog_sites = wp_get_sites(array("archived"=>"0","deleted"=>"0")); 
 	$blog_list = array();
 	$i = 0;
@@ -77,6 +73,14 @@ function hk_startpage_func( $atts ){
 	
 	usort($blog_list, "cmp_blogs_name");
 	
+	return $blog_list;
+}
+
+
+function hk_startpage_func( $atts ){
+	$retValue = "";
+
+	$blog_list = hk_get_sorted_sites();
 	
 	$retValue .= "<div id='bloggstartpage' class='bloggstartpage'>";
 

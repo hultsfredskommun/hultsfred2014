@@ -156,7 +156,16 @@ textarea {
 }
 
 
+/*.gallery-item .gallery-icon a img {
+	width: 100%;
+}*/
 
+
+
+/* gallery text fix */
+.gallery-item .gallery-caption {
+	opacity: 1;
+}
 
 ::-webkit-input-placeholder {
    color: white;
