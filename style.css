@@ -35,10 +35,14 @@ Version:        0.1.0
     padding: 15px 30px;
 	text-align: center;
 }
+#secondary a:hover,
 .panorama-wrapper a,
+.site-info a:hover,
 .panorama-wrapper a:hover {
 	color: rgba(255, 255, 255, 0.7);
 }
+#secondary a:hover,
+.site-info a:hover,
 .panorama-wrapper a:hover {
 	text-decoration: underline;
 }
@@ -55,9 +59,6 @@ Version:        0.1.0
 #secondary {
     background: #6B91B8;
     color: rgba(255, 255, 255, 0.9);
-}
-#secondary a:hover {
-    color: #666;
 }
 #supplementary {
     background: #e5e6e7;
@@ -155,10 +156,6 @@ textarea {
 	margin-left: 0;
 }
 
-
-/*.gallery-item .gallery-icon a img {
-	width: 100%;
-}*/
 
 
 
@@ -352,8 +349,7 @@ a:hover,
 .widget a:hover,
 .widget-title a:hover,
 .widget_twentyfourteen_ephemera .entry-meta a:hover,
-.content-sidebar .widget_twentyfourteen_ephemera .entry-meta a:hover ,
-.site-info a:hover,
+.content-sidebar .widget_twentyfourteen_ephemera .entry-meta a:hover,
 .featured-content a:hover    {
 	color: #6B91B8;/*#41a62a;*/
 }
