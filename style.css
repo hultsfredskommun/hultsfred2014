@@ -162,6 +162,10 @@ textarea {
 /* gallery text fix */
 .gallery-item .gallery-caption {
 	opacity: 1;
+	position: initial;
+	background-color: white;
+	color: #333;
+	width: 150px;
 }
 
 ::-webkit-input-placeholder {
