@@ -21,19 +21,13 @@
 					<?php 
 					
 					$blog_list = hk_get_sorted_sites();
-					$i = 0;
 					$first = true;
 					foreach ($blog_list AS $blog) {
-						
-						if ($blog['blog_id'] != "1") {
-					
-							$details = get_blog_details($blog['blog_id']); 
-							if (!$first) {
-								echo ' | ';
-							}
-							$first = false;
-							echo ' <a href="' . $details->siteurl . '">' . $details->blogname . '</a> ';
+						if (!$first) {
+							echo ' | ';
 						}
+						$first = false;
+						echo ' <a href="' . $blog["siteurl"] . '">' . $blog["name"] . '</a> ';
 					}
 					?>
 						
