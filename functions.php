@@ -85,13 +85,13 @@ function hk_startpage_func( $atts ){
 	$retValue .= "<div id='bloggstartpage' class='bloggstartpage'>";
 
 	foreach ($blog_list AS $blog) { 
-		$retValue .= '<div class="blogitem">';
+		$retValue .= '<div class="blogitem-wrapper"><div class="blogitem">';
 		if ($blog['image'] != "")
-			$retValue .= '<div class="blogheaderimg"><img src="' . $blog['image'] .'" alt="' . $blog['name'] . '" /></div>';
+			$retValue .= '<div class="blogheaderimg"><a href="' . $blog['siteurl'] . '"><img src="' . $blog['image'] .'" alt="' . $blog['name'] . '" /></a></div>';
 		else
-			$retValue .= '<div class="blogheaderimg"><img class="noimage" src="' . get_stylesheet_directory_uri() . '/Hultsfreds_kommun_blO_grO_blOtxt.png" alt="' . $blog['name'] . '" /></div>';
-		$retValue .= '<strong><a href="' . $blog['siteurl'] . '">' . $blog['name'] . '</a></strong> ';
-		$retValue .= '<br><i>Uppdaterad ' . $blog['updated'] . '</i></div>';
+			$retValue .= '<div class="blogheaderimg"><a href="' . $blog['siteurl'] . '"><img class="noimage" src="' . get_stylesheet_directory_uri() . '/Hultsfreds_kommun_blO_grO_blOtxt.png" alt="' . $blog['name'] . '" /></a></div>';
+		$retValue .= '<span class="header"><a href="' . $blog['siteurl'] . '">' . $blog['name'] . '</a></span>';
+		$retValue .= '<span class="updated">Uppdaterad ' . $blog['updated'] . '</span></div></div>';
 
 		//restore to blog
 	
