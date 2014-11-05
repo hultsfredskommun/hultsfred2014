@@ -195,7 +195,7 @@ textarea {
 	position: relative;
 	background-color: white;
 	color: #333;
-	width: 150px;
+	width: 100%;
 }
 
 ::-webkit-input-placeholder {
