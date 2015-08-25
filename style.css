@@ -10,14 +10,7 @@ Version:        0.1.0
 
 @import url("../twentyfourteen/style.css");
 
-.logo {
-    background: white;
-    padding: 2px 10px 0px;
-    float:right;
-	overflow: hidden;
-	width: 38px;
-	margin-right: -10px;
-}
+
 .search-toggle {
 	margin-right: 0;
 }
@@ -50,6 +43,14 @@ Version:        0.1.0
     max-width: 100%;
 }
 
+.logo_h1 {
+	height: 48px;
+	float: left;
+	margin-right: 10px;
+}
+.logo_h1 img{
+	height: 90%;
+}
 .site-header {
     background: #5c85b1;
 }
@@ -66,6 +67,7 @@ Version:        0.1.0
 #supplementary * {
     color: #666;
 }
+
 .pre-primary-navigation,
 .primary-navigation,
 .primary-sticky-navigation {
@@ -80,11 +82,27 @@ Version:        0.1.0
 .primary-navigation ul ul a {
     padding: 6px 12px;
 }
-.menu-toggle {
-	position: relative;
-	background: transparent;
-	float: right;
+.primary-navigation ul a:hover {
+	color: white;
 }
+.menu-toggle {
+	
+	background: transparent;
+	
+}
+.primary-navigation.toggled-on {
+    padding: 0 0 36px;
+}
+.primary-navigation.toggled-on  .nav-menu {
+    padding-top: 72px;
+}/*
+.menu-toggle {
+	margin-right: 50px;
+}*/
+.search-toggle {
+	margin-right: 38px;
+}
+
 
 .site-info {
 	text-align: center;
@@ -285,6 +303,9 @@ a,
 		padding-right: 30px;
 		padding-left: 30px;
 	}
+	.search-toggle {
+		margin-right: 20px;
+	}
 }
 
 @media screen and (min-width: 783px) {
@@ -292,17 +313,21 @@ a,
 		display: none;
 		padding: 0;
 	}
-	.logo {
-		overflow: visibility;
-		width: auto;
-		margin-right: 0;
-	}
 	.primary-navigation {
 		width: auto;
 		margin-top: 0px;
 	}
 	.blogitem-wrapper {
 		width: 20%;
+	}
+	.primary-navigation.toggled-on {
+		padding: 72px 0 36px;
+	}
+	.primary-navigation.toggled-on  .nav-menu {
+		padding-top: 0;
+	}
+	.search-toggle {
+		margin-right: 0px;
 	}
 }
 
