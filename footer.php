@@ -17,7 +17,7 @@
 			<?php get_sidebar( 'footer' ); ?>
 
 			<div class="panorama-wrapper">
-				<img src="http://www.hultsfred.se/files/2013/03/panorama_webb.png" alt="Hultsfreds kommun" /><br>
+				<img src="<?php echo get_stylesheet_directory_uri(); ?>/panorama_webb.png" alt="Hultsfreds kommun" /><br>
 					<?php 
 					
 					$blog_list = hk_get_sorted_sites();
